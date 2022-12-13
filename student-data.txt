@@ -1,0 +1,60 @@
+Ganesh
+4ni19cs087
+3
+4
+Data Structure and Algorithms
+Cs01
+3
+87
+Cloud Computing
+Cs02
+2
+75
+Object Oriented Modelling and Design
+Cs04
+4
+90
+C Language
+Cs03
+2
+65
+Girisha
+4ni19cs070
+2
+3
+Data Structure and Algorithms
+Cs01
+3
+41
+Object Oriented Modelling and Design
+Cs04
+4
+78
+C Language
+Cs03
+2
+89
+Harini
+4ni19cs120
+4
+5
+Operational Research
+Cs01
+3
+89
+Object Oriented Modelling and Design
+Cs04
+4
+90
+C Language
+Cs03
+2
+99
+Object Oriented Modelling and Design
+Cs05
+2
+100
+Data Structure and Algorithms
+Cs05
+2
+95

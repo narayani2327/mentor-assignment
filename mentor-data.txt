@@ -1,0 +1,40 @@
+Hari
+Computer Science
+2
+Data Structure and Algorithms
+Meghana
+Computer Science
+5
+Data Structure and Algorithms
+Kalavathi
+Computer Science
+1
+Cloud Computing
+Harshvardhan
+Computer Science
+7
+Cloud Computing
+Ragini
+Computer Science
+6
+Operational Research
+Harshi
+Computer Science
+2
+Operational Research
+Yeshwanth
+Computer Science
+4
+C Language
+Najesh
+Computer Science
+1
+C Language
+Varun
+Computer Science
+8
+Object Oriented Modelling and Design
+Gayathri
+Computer Science
+4
+Object Oriented Modelling and Design
