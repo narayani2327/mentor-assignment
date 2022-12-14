@@ -20,7 +20,7 @@ class Student:
         self.usn=usn
         self.year=year
     def display(self):
-        print("\n\n---------Student details---------")
+        print("=======================")
         print("Name:",self.name,end="")
         print("USN:",self.usn,end="")
         print("Year:",self.year,end="")
@@ -44,8 +44,8 @@ class Subject:
 print("-----------Welcome to Mentor assignment program-----------")
 mentors=[]
 students=[]
-print("\n---------Mentor details---------")
 with open("mentor-data.txt") as fp:
+    print("\n---------Mentor details---------")
     while True:
         name=fp.readline()
         department=fp.readline()
@@ -54,11 +54,12 @@ with open("mentor-data.txt") as fp:
         if not name:
             break
         m = Mentor(name, department, experience, subject)
-        # m.display()    
+        m.display()    
         mentors.append(m)
 
 
 with open("student-data.txt") as fp:
+    print("\n\n---------Student details---------")
     while True:
         name=fp.readline()
         usn=fp.readline()
@@ -76,20 +77,18 @@ with open("student-data.txt") as fp:
             sub.append(s)
         st = Student(name, numberOfSubjects, sub, usn, year)
         students.append(st)
-        # st.display()
+        st.display()
 
-
+print("\n\n=======Mentor allocation=======")
 for i in students:
     max_attr = min(i.marks, key=attrgetter('mark'))
-    print(max_attr.mark, max_attr.name)
-    mento=[]
+    mento=""
+    maxExp=0
     for j in mentors:
-        if j.subject==max_attr.name:
-            mento.append(j)
-    if len(mento)>1:
-        m=max(mento.experience)
-        for j in mento:
-            if mento.experience==m:
-                print(mento.name)
-    else:
-        print(mento[0].name)
+        if j.subject==max_attr.name and int(j.experience)>int(maxExp):
+            mento=j.name
+            maxExp=j.experience
+    print("Student name:",i.name,end="")
+    print("Mentor assigned:",mento,end="")
+    print("Marks obtained:",max_attr.mark,end="")
+    print("Subject Name:",max_attr.name)
