@@ -39,7 +39,7 @@ class Subject:
         print("Name:",self.name,end="")
         print("Subject ID:",self.subjectID,end="")
         print("Credits:",self.credit,end="")
-        print("Marks:",self.mark,end="")
+        print("Marks:",self.mark)
     
 print("-----------Welcome to Mentor assignment program-----------")
 mentors=[]
@@ -81,6 +81,7 @@ with open("student-data.txt") as fp:
         st.display()
 
 print("\n\n=======Mentor allocation=======")
+f = open("mentor-assigned.txt", "a")
 for i in students:
     max_attr = min(i.marks, key=attrgetter('mark'))
     mento=""
@@ -91,5 +92,11 @@ for i in students:
             maxExp=j.experience
     print("Student name:",i.name,end="")
     print("Mentor assigned:",mento,end="")
-    print("Marks obtained:",max_attr.mark,end="")
+    print("Marks obtained:",max_attr.mark)
     print("Subject Name:",max_attr.name)
+    f.write("Student name:"+i.name)
+    f.write("Mentor assigned:"+mento)
+    f.write("Marks obtained:"+str(max_attr.mark))
+    f.write("\nSubject Name:"+max_attr.name)
+    f.write("\n")
+f.close()
