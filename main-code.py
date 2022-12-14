@@ -73,6 +73,7 @@ with open("student-data.txt") as fp:
             subjectID=fp.readline()
             credit=fp.readline()
             marks=fp.readline()
+            marks=int(marks)
             s= Subject(subjectName, marks, subjectID, credit)
             sub.append(s)
         st = Student(name, numberOfSubjects, sub, usn, year)
