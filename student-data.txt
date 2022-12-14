@@ -53,8 +53,28 @@ Cs03
 Object Oriented Modelling and Design
 Cs05
 2
-100
+95
 Data Structure and Algorithms
 Cs05
 2
 95
+Girisha
+4ni19cs007
+1
+4
+Data Structure and Algorithms
+Cs01
+3
+99
+Cloud Computing
+Cs02
+2
+95
+Object Oriented Modelling and Design
+Cs04
+4
+90
+C Language
+Cs03
+2
+30
