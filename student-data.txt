@@ -69,7 +69,7 @@ Cs01
 Cloud Computing
 Cs02
 2
-95
+100
 Object Oriented Modelling and Design
 Cs04
 4
