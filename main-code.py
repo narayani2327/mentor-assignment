@@ -44,57 +44,18 @@ class Subject:
 print("-----------Welcome to Mentor assignment program-----------")
 mentors=[]
 students=[]
-# print("\nMentor details")
-# with open("mentor-data.txt") as fp:
-#     while True:
-#         name=fp.readline()
-#         department=fp.readline()
-#         experience=fp.readline()
-#         subject=fp.readline()
-#         if not name:
-#             break
-#         m = Mentor(name, department, experience, subject)
-#         m.display()    
-#         mentors.append(m)
-
-# print("Please enter students details")
-# for i in range(numberOfStudents):
-#     print("\nStudent",i+1, "details")
-#     name=input("Enter name ")
-#     usn=input("Enter usn ")
-#     year=input("Enter year ")
-#     numberOfSubjects=int(input("Enter number of subjects "))
-#     sub=[]
-#     for j in range(numberOfSubjects):
-#         print("Subject",j+1, "details")
-#         subjectName=input("Enter subject name ")
-#         subjectID=input("Enter subjectID ")
-#         credit=input("Enter credits ")
-#         marks=input("Enter marks ")
-#         s= Subject(subjectName, marks, subjectID, credit)
-#         sub.append(s)
-#     st = Student(name, numberOfSubjects, sub, usn, year)
-#     students.append(st)
-
-
-# for i in students:
-#     i.display()
-# for i in mentors:
-#     i.display()
-
-
-
-# for i in students:
-#     max_attr = min(i.marks, key=attrgetter('mark'))
-#     print(max_attr.mark, max_attr.name)
-#     mento=[]
-#     for j in mentors:
-#         if j.subject==max_attr.name:
-#             mento.append(j)
-#     if len(mento)>1:
-#         print(max(mento.experience))
-#     else:
-#         print(mento[0].name)
+print("\n---------Mentor details---------")
+with open("mentor-data.txt") as fp:
+    while True:
+        name=fp.readline()
+        department=fp.readline()
+        experience=fp.readline()
+        subject=fp.readline()
+        if not name:
+            break
+        m = Mentor(name, department, experience, subject)
+        # m.display()    
+        mentors.append(m)
 
 
 with open("student-data.txt") as fp:
@@ -115,4 +76,20 @@ with open("student-data.txt") as fp:
             sub.append(s)
         st = Student(name, numberOfSubjects, sub, usn, year)
         students.append(st)
-        st.display()
+        # st.display()
+
+
+for i in students:
+    max_attr = min(i.marks, key=attrgetter('mark'))
+    print(max_attr.mark, max_attr.name)
+    mento=[]
+    for j in mentors:
+        if j.subject==max_attr.name:
+            mento.append(j)
+    if len(mento)>1:
+        m=max(mento.experience)
+        for j in mento:
+            if mento.experience==m:
+                print(mento.name)
+    else:
+        print(mento[0].name)
