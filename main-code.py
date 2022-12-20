@@ -56,7 +56,7 @@ with open("mentor-data.txt") as fp:
         m = Mentor(name, department, experience, subject)
         m.display()    
         mentors.append(m)
-
+fp.close()
 
 with open("student-data.txt") as fp:
     print("\n\n---------Student details---------")
@@ -79,6 +79,7 @@ with open("student-data.txt") as fp:
         st = Student(name, numberOfSubjects, sub, usn, year)
         students.append(st)
         st.display()
+fp.close()
 
 print("\n\n=======Mentor allocation=======")
 f = open("mentor-assigned.txt", "a")
@@ -86,17 +87,24 @@ for i in students:
     max_attr = min(i.marks, key=attrgetter('mark'))
     mento=""
     maxExp=0
-    for j in mentors:
-        if j.subject==max_attr.name and int(j.experience)>int(maxExp):
-            mento=j.name
-            maxExp=j.experience
-    print("Student name:",i.name,end="")
-    print("Mentor assigned:",mento,end="")
-    print("Marks obtained:",max_attr.mark)
-    print("Subject Name:",max_attr.name)
-    f.write("Student name:"+i.name)
-    f.write("Mentor assigned:"+mento)
-    f.write("Marks obtained:"+str(max_attr.mark))
-    f.write("\nSubject Name:"+max_attr.name)
-    f.write("\n")
+    if max_attr.mark<80:
+        for j in mentors:
+            if j.subject==max_attr.name and int(j.experience)>int(maxExp):
+                mento=j.name
+                maxExp=j.experience
+        print("Student name:",i.name,end="")
+        print("Mentor assigned:",mento,end="")
+        print("Marks obtained:",max_attr.mark)
+        print("Subject Name:",max_attr.name)
+        f.write("Student name:"+i.name)
+        f.write("Mentor assigned:"+mento)
+        f.write("Marks obtained:"+str(max_attr.mark))
+        f.write("\nSubject Name:"+max_attr.name)
+        f.write("\n")
+    else:
+        print("Student name:",i.name,end="")
+        print("No mentor assigned\n")
+        f.write("Student name:"+i.name)
+        f.write("No mentor assigned\n")
+        f.write("\n")
 f.close()
