@@ -5,11 +5,11 @@ Ganesh
 Data Structure and Algorithms
 Cs01
 3
-87
+100
 Cloud Computing
 Cs02
 2
-75
+95
 Object Oriented Modelling and Design
 Cs04
 4
@@ -17,7 +17,7 @@ Cs04
 C Language
 Cs03
 2
-65
+80
 Girisha
 4ni19cs070
 2
@@ -25,15 +25,15 @@ Girisha
 Data Structure and Algorithms
 Cs01
 3
-41
+50
 Object Oriented Modelling and Design
 Cs04
 4
-78
+60
 C Language
 Cs03
 2
-89
+80
 Harini
 4ni19cs120
 4
@@ -41,23 +41,23 @@ Harini
 Operational Research
 Cs01
 3
-89
+35
 Object Oriented Modelling and Design
 Cs04
 4
-90
+60
 C Language
 Cs03
 2
-99
+45
 Object Oriented Modelling and Design
 Cs05
 2
-95
+60
 Data Structure and Algorithms
 Cs05
 2
-95
+80
 Girisha
 4ni19cs007
 1
@@ -65,16 +65,16 @@ Girisha
 Data Structure and Algorithms
 Cs01
 3
-99
+50
 Cloud Computing
 Cs02
 2
-100
+60
 Object Oriented Modelling and Design
 Cs04
 4
-90
+65
 C Language
 Cs03
 2
-30
+40
